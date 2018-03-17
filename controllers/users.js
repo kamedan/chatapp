@@ -3,10 +3,15 @@ module.exports = function(_){
      return {
          setRouting: function(router){
             router.get('/', this.indexPage);
+            router.get('/signup', this.getSignup);
          },
 
          indexPage : function(req, res){
-            return res.render('index', {test: 'this is a test'});
+            return res.render('index');
+         },
+
+         getSignup: function(req, res){
+            return res.render('signup');
          }
      }
 }
